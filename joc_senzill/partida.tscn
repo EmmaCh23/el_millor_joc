@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://jugador_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://port1.png" type="Texture" id=2]
+[ext_resource path="res://camp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://limit_mapa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://pilota.tscn" type="PackedScene" id=5]
+[ext_resource path="res://porte2.png" type="Texture" id=7]
+[ext_resource path="res://jugador_2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://porteria_j1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://porteria_j2.tscn" type="PackedScene" id=10]
+
+[node name="partida" type="Node2D"]
+
+[node name="camp" parent="." instance=ExtResource( 3 )]
+light_mask = 1048575
+
+[node name="Camera2D" type="Camera2D" parent="camp"]
+position = Vector2( -349.57, -44.6721 )
+scale = Vector2( 0.294118, 0.285714 )
+anchor_mode = 0
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+
+[node name="jugador_1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 164.274, 480.238 )
+
+[node name="pilota" parent="." instance=ExtResource( 5 )]
+position = Vector2( 173.456, -166.562 )
+
+[node name="limit_mapa" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 38.0977 )
+
+[node name="porte1" type="Sprite" parent="."]
+position = Vector2( 1251.24, 224.662 )
+scale = Vector2( 4.776, 6.573 )
+texture = ExtResource( 2 )
+
+[node name="porte2" type="Sprite" parent="."]
+position = Vector2( -212.216, 223.836 )
+scale = Vector2( 4.648, 6.784 )
+texture = ExtResource( 7 )
+
+[node name="jugador_2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 810.46, 472.308 )
+
+[node name="porteria_j1" parent="." instance=ExtResource( 9 )]
+position = Vector2( -30.4402, 38.8363 )
+script = null
+
+[node name="porteria_j2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 44.4042, -4.31177 )
+script = null
+[connection signal="body_entered" from="porteria_j1" to="camp" method="_on_porteria_j1_body_entered"]
+[connection signal="body_entered" from="porteria_j1" to="pilota" method="_on_porteria_j1_body_entered"]
+[connection signal="body_entered" from="porteria_j2" to="camp" method="_on_porteria_j2_body_entered"]
+[connection signal="body_entered" from="porteria_j2" to="pilota" method="_on_porteria_j2_body_entered"]

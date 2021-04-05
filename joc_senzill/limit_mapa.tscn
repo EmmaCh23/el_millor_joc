@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 179.149, 348.265 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 846.861, 110.607 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 182.363, 406.937 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 716.656, 173.466 )
+
+[node name="limit_mapa" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -104.543, 296.027 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 287.35, -103.267 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 1126.95, 220.003 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( 475.924, 691.437 )
+shape = SubResource( 4 )

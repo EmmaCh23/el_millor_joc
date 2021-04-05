@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://transparent-soccer-ball-soccer-clipart-png-transparent-azpng5db11576d60270.6520987315718864548766.png" type="Texture" id=1]
+[ext_resource path="res://pilota.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 46.7089
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 345.068, 333.754 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 345.326, 332.022 )
+scale = Vector2( 0.135026, 0.128424 )
+texture = ExtResource( 1 )

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://camp.jpeg" type="Texture" id=1]
+[ext_resource path="res://camp.gd" type="Script" id=2]
+
+[node name="camp" type="Sprite"]
+position = Vector2( 1193.32, 157.002 )
+scale = Vector2( 3.4, 3.5 )
+texture = ExtResource( 1 )
+offset = Vector2( -199.213, 41.428 )
+script = ExtResource( 2 )
+
+[node name="j1" type="Label" parent="."]
+margin_left = -232.42
+margin_top = 3.05107
+margin_right = -192.42
+margin_bottom = 17.0511
+rect_scale = Vector2( 2.83529, 2.80571 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="j2" type="Label" parent="."]
+margin_left = -182.167
+margin_top = 1.52555
+margin_right = -142.167
+margin_bottom = 15.5255
+rect_scale = Vector2( 2.65882, 2.72509 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+margin_left = -212.004
+margin_top = 57.9703
+margin_right = -172.004
+margin_bottom = 71.9703
+rect_scale = Vector2( 5.35074, -4.9213 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}

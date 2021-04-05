@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://porteria_j1.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.46775, 52.73 )
+
+[node name="porteria_j1" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 98.1628, 320.917 )
+scale = Vector2( 25.28, 3.56 )
+shape = SubResource( 1 )
